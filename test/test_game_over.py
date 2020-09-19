@@ -1,5 +1,5 @@
 import unittest
-from checkers.game import Game
+from bobail.game import Game
 
 import random
 
@@ -11,20 +11,16 @@ class TestGameOver(unittest.TestCase):
 	def test_new_game_not_over(self):
 		self.expect(False)
 
-	def test_win_by_capture(self):
-		self.make_non_final_moves([[10, 14], [23, 18], [14, 23], [26, 19], [11, 15], [19, 10], [6, 15], [22, 18], [15, 22], [25, 18], [9, 13], [21, 17], [13, 22],
-			[31, 26], [22, 31], [24, 19], [31, 24], [24, 15], [15, 22], [29, 25], [22, 29], [30, 25], [29, 22], [28, 24], [12, 16], [32, 27], [16, 20], [27, 23],
-			[20, 27], [23, 18]])
+	def test_win_by_bobail_end_row(self):
+		self.make_non_final_moves([[3, 11], [13, 8], [25, 10]])
 
-		self.move([22, 15]).expect(True)
+		self.move([8, 3]).expect(True)
+	
+	def test_win_by_bobail_trapped(self):
+		self.make_non_final_moves([[3, 11], [13, 12], [23, 17], [12, 16]])
 
-	def test_win_by_no_legal_moves(self):
-		self.make_non_final_moves([[11, 15], [22, 18], [15, 22], [25, 18], [12, 16], [18, 14], [9, 18], [23, 14], [10, 17], [21, 14], [5, 9], [14, 5], [6, 9],
-			[29, 25], [9, 13], [25, 22], [2, 6], [22, 18], [13, 17], [27, 23], [17, 21], [24, 19], [8, 12], [30, 25], [21, 30], [28, 24], [4, 8], [18, 14], [6, 10],
-			[32, 27], [10, 17], [23, 18], [16, 23], [23, 32], [24, 19], [30, 23], [23, 14], [31, 27], [32, 23]])
-
-		self.move([23, 16]).expect(True)
-
+		self.move([4, 12]).expect(True)
+	"""
 	def test_move_limit_draw(self):
 		self.make_non_final_moves([[10, 14], [22, 17], [9, 13], [17, 10], [7, 14], [25, 22], [6, 10], [29, 25], [1, 6], [22, 18], [6, 9], [24, 19], [2, 6], [28, 24],
 			[11, 16], [24, 20], [8, 11], [32, 28], [4, 8], [27, 24], [3, 7], [31, 27], [13, 17], [25, 22], [9, 13], [18, 9], [9, 2], [10, 14], [22, 18], [5, 9], [19, 15],
@@ -35,7 +31,7 @@ class TestGameOver(unittest.TestCase):
 			[9, 6], [11, 8], [6, 9], [8, 11], [9, 6], [11, 8], [6, 9], [8, 11], [9, 6], [11, 8], [6, 9], [8, 11], [9, 6]])
 
 		self.move([11, 8]).expect(True)
-
+	"""
 	def make_non_final_moves(self, moves):
 		for move in moves:
 			self.move(move).expect(False)
