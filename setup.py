@@ -4,15 +4,15 @@ with open("readme.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name = "imparaai-bobail",
+    name = "bobail",
     version = "1.4.2",
     license = 'MIT',
-    author = "ImparaAI",
+    author = "jasondaming",
     author_email = "author@example.com",
-    description = "Library for playing a standard game of bobail/draughts",
+    description = "Library for playing a standard game of bobail",
     long_description = long_description,
     long_description_content_type = "text/markdown",
-    url = "https://github.com/ImparaAI/bobail",
+    url = "https://github.com/jasondaming/bobail",
     packages = setuptools.find_packages(),
     classifiers = [
         "Programming Language :: Python :: 3",
