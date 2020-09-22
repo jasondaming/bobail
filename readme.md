@@ -1,5 +1,7 @@
 A Python3 library that you can use to play a game of bobail. This is just a set of classes that you can use in your code, it's not an interactive shell for the game.
 
+[![Build Status](https://travis-ci.org/jasondaming/bobail.svg?branch=master)](https://travis-ci.org/github/jasondaming/bobail)
+
 # Assumptions
 
 The rules used are from BoardGameAreana (http://en.doc.boardgamearena.com/Gamehelpbobail). This means an 5x5 board.
