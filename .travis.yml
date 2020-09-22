@@ -8,8 +8,8 @@ script:
 deploy:
   provider: pypi
   skip_existing: true
-  user: __token__
-  password: pypi-AgEIcHlwaS5vcmcCJDNmOGQzYjkyLWUxZjgtNDFkMi05Yjc1LTdlNTAzOTZlM2RiMwACJXsicGVybWlzc2lvbnMiOiAidXNlciIsICJ2ZXJzaW9uIjogMX0AAAYgXXQTxl7qJVMnLMDyUDPzxIcjEMafzTSJ-Hfw6vAd1nE
+  user: "__token__"
+  password: "pypi-AgEIcHlwaS5vcmcCJDNmOGQzYjkyLWUxZjgtNDFkMi05Yjc1LTdlNTAzOTZlM2RiMwACJXsicGVybWlzc2lvbnMiOiAidXNlciIsICJ2ZXJzaW9uIjogMX0AAAYgXXQTxl7qJVMnLMDyUDPzxIcjEMafzTSJ-Hfw6vAd1nE"
   on:
     tags: true
 notifications:
